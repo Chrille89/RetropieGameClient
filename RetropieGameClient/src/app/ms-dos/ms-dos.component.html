@@ -1,10 +1,44 @@
 <ion-grid>
- <h1>MS-DOS Logo</h1>
-  <button ion-item *ngFor="let game of games" style="background: rgba(0,0,0,0);">
+  <img src="../../assets/img/dos-logo.jpeg">
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input placeholder="Link für neues Spiel"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="full" color="dark">Upload</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid>
+  <ion-item ion-item *ngFor="let game of games" style="background: rgba(0,0,0,0);">
     <ion-row>
       <ion-col>
-        <p>{{game}}</p>
+        <ion-item>
+          <p>{{game}}</p>
+        </ion-item>
       </ion-col>
+      <ion-col >
+      </ion-col>
+      <ion-col >
+      </ion-col>
+      <ion-col >
+
+        <ion-item >
+          <ion-button color="dark"><ion-icon name="trash-outline"></ion-icon></ion-button>
+
+        </ion-item>
+      </ion-col>
+
+
     </ion-row>
-  </button>
+  </ion-item>
+
 </ion-grid>
+
+
+
+
+

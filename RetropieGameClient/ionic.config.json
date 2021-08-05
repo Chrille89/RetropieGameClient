@@ -1,5 +1,7 @@
 {
   "name": "RetropieGameClient",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
