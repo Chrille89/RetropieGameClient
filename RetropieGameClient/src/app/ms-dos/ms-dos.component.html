@@ -2,40 +2,33 @@
   <img src="../../assets/img/dos-logo.jpeg">
   <ion-row>
     <ion-col>
-      <ion-item>
-        <ion-input placeholder="Link für neues Spiel"></ion-input>
-      </ion-item>
+      <div>
+        <ion-input placeholder="Link für neues Spiel" type="text" [(ngModel)]="link" text-right id="input"></ion-input>
+      </div>
     </ion-col>
     <ion-col>
-      <ion-button expand="full" color="dark">Upload</ion-button>
+      <div>
+        <ion-button (click)="addGame()" expand="full" color="dark">Upload</ion-button>
+      </div>
     </ion-col>
   </ion-row>
-</ion-grid>
 
-<ion-grid>
-  <ion-item ion-item *ngFor="let game of games" style="background: rgba(0,0,0,0);">
-    <ion-row>
-      <ion-col>
-        <ion-item>
-          <p>{{game}}</p>
-        </ion-item>
-      </ion-col>
-      <ion-col >
-      </ion-col>
-      <ion-col >
-      </ion-col>
-      <ion-col >
-
-        <ion-item >
-          <ion-button color="dark"><ion-icon name="trash-outline"></ion-icon></ion-button>
-
-        </ion-item>
-      </ion-col>
-
-
-    </ion-row>
-  </ion-item>
-
+  <ion-row *ngFor="let game of games" style="background: rgba(0,0,0,0);">
+    <ion-col>
+      <div>
+        <p>{{game}}</p>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <ion-button color="dark" (click)="deleteGame(game)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+      </div>
+    </ion-col>
+  </ion-row>
 </ion-grid>
 
 
