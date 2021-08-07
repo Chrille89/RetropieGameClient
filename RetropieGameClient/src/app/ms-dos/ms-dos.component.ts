@@ -21,6 +21,7 @@ export class MsDosComponent implements OnInit {
     this.dataService.addDosGame(this.link)
     .subscribe(res => {
       console.log(res);
+      this.link = "";
       this.getAllGames();
     });
   }
