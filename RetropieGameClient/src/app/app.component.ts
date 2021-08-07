@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-
 import { Platform } from '@ionic/angular';
-import { Plugins } from '@capacitor/core';
-const { App } = Plugins;
 
 @Component({
   selector: 'app-root',
@@ -20,7 +17,7 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.platform.backButton.subscribeWithPriority(-1, () => {
         console.log("Exit App.");
-        App.exitApp();
+        navigator['app'].exitApp();
       });
     });
   }
