@@ -11,9 +11,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 
 import { MsDosComponent } from './ms-dos/ms-dos.component';
+import { SnesComponent } from './snes/snes.component';
 
 @NgModule({
-  declarations: [AppComponent, MsDosComponent],
+  declarations: [AppComponent, MsDosComponent, SnesComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

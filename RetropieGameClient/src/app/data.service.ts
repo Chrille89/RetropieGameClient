@@ -25,4 +25,18 @@ export class DataService {
     return this.httpClient.delete(this.endpoint+"/pc/"+game);
   }
 
+  getSnesGames() {
+    console.log("getSnesGames");
+    return this.httpClient.get(this.endpoint+"/snes");
+  }
+
+  addSnesGame(link : string) {
+    console.log("addSnesGame: "+link);
+    return this.httpClient.post(this.endpoint+"/snes",{ url : link});
+  }
+
+  deleteSnesGame(game : string) {
+    console.log("deleteSnesGame: "+game);
+    return this.httpClient.delete(this.endpoint+"/snes/"+game);
+  }
 }

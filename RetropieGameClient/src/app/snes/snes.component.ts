@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
-  selector: 'app-ms-dos',
-  templateUrl: './ms-dos.component.html',
-  styleUrls: ['./ms-dos.component.scss'],
+  selector: 'app-snes',
+  templateUrl: './snes.component.html',
+  styleUrls: ['./snes.component.scss'],
 })
-export class MsDosComponent implements OnInit {
+export class SnesComponent implements OnInit {
 
   games : any[];
   link : string;
@@ -19,14 +19,14 @@ export class MsDosComponent implements OnInit {
 
   getAllGames() {
     console.log("Get all games");
-    this.dataService.getDosGames()
+    this.dataService.getSnesGames()
     .subscribe((data: any[]) => {
         this.games = data;
     });
   }
 
   addGame() {
-    this.dataService.addDosGame(this.link)
+    this.dataService.addSnesGame(this.link)
     .subscribe(res => {
       console.log(res);
       this.link = "";
@@ -36,7 +36,7 @@ export class MsDosComponent implements OnInit {
 
   deleteGame(game : string) {
     console.log("deleteGame: "+game);
-    this.dataService.deleteDosGame(game)
+    this.dataService.deleteSnesGame(game)
     .subscribe(res => {
         console.log(res);
         this.getAllGames();
